@@ -19,9 +19,7 @@ require 'sinatra'
   end
 
   get '/favorites' do
-    @fave_links = ['<a href="https://junerecords.com">June Records</a>']
-    # @fav_links = <a href="https://junerecords.com">June Records</a>
-    #  <a href="https://junerecords.com">June Records</a>
-    #   <a href="https://junerecords.com">June Records</a>
+    @fave_links = ['<a href="https://junerecords.com">June Records</a>', '<a href="http://post-trash.com/">Post Trash</a>', '<a href="http://www.apartmenttherapy.com/">Apartment Therapy</a>', '<a href="http://www.missmoss.co.za/">Miss Moss</a>', '<a href="http://www.thefader.com">Fader</a>']
+
      erb :faves
   end
