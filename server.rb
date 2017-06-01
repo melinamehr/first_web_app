@@ -1,16 +1,25 @@
 require 'sinatra'
 
-get '/home' do
+  get '/home' do
 
   erb :index
-end
+  end
 
-get '/portfolio' do
+  get '/portfolio' do
 
     erb :gallery
-end
+  end
 
-get '/aboutme' do
-
+  get 'about_me' do
+    @skills = ['git', 'HTML', 'CSS', 'Ruby']
+    @interests = ['food', 'food', 'cinema', 'tunes', 'the basquettes']
     erb :maline
-end
+  end
+
+  #get '/favorites' do
+
+  #  @fav_links = <a href="https://junerecords.com">June Records</a>
+  #    <a href="https://junerecords.com">June Records</a>
+  #    <a href="https://junerecords.com">June Records</a>
+  #    erb :faves
+  #end
