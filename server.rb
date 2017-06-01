@@ -1,12 +1,14 @@
 require 'sinatra'
 
   get '/home' do
+    erb :index
+  end
 
-  erb :index
+  get '/' do
+    redirect to('/home')
   end
 
   get '/portfolio' do
-
     erb :gallery
   end
 
@@ -16,10 +18,10 @@ require 'sinatra'
     erb :maline
   end
 
-  #get '/favorites' do
-
-  #  @fav_links = <a href="https://junerecords.com">June Records</a>
-  #    <a href="https://junerecords.com">June Records</a>
-  #    <a href="https://junerecords.com">June Records</a>
-  #    erb :faves
-  #end
+  get '/favorites' do
+    @fave_links = ['<a href="https://junerecords.com">June Records</a>']
+    # @fav_links = <a href="https://junerecords.com">June Records</a>
+    #  <a href="https://junerecords.com">June Records</a>
+    #   <a href="https://junerecords.com">June Records</a>
+     erb :faves
+  end
