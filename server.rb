@@ -9,3 +9,8 @@ get '/portfolio' do
 
     erb :gallery
 end
+
+get '/aboutme' do
+
+    erb :maline
+end
